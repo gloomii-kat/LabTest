@@ -4,10 +4,10 @@ import os
 # Add the project root folder so the test file can import getbest.py
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-import i0
+import io
 from getbest import getCols, findTop
 
-def test_getCols_basic():::
+def test_getCols_basic():
     # Simulated CSV file with the standard column order
     data = io.StringIO(
         "Course,Student Number,Mark,Comment\n"
@@ -19,7 +19,7 @@ def test_getCols_basic():::
     assert num_col == 1
     assert mark_col == 2
 
-def test_findTop__basic():
+def test_findTop_basic():
     # Simulated CSV file with multiple students and distinct marks
     data = io.StringIO(
         "Course,Student Number,Mark,Comment\n"
